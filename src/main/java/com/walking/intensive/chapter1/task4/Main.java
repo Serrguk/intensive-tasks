@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
 //        Для собственных проверок можете делать любые изменения в этом методе
         double a = 1;
-        double b = 9;
-        double c = 2;
+        double b = 0;
+        double c = 0;
 
         System.out.println(solveQuadraticEquation(a, b, c));
 
@@ -53,8 +53,9 @@ public class Main {
         double root2 = (-b - Math.sqrt(getDiscriminant(a, b, c)) / (2 * a));
 
         double[] roots = new double[2];
-        roots[0] = root1;
-        roots[1] = root2;
+
+        roots[0] = Math.round(root1 * 100) / 100.0;
+        roots[1] = Math.round(root2 * 100) / 100.0;
 
         return roots;
     }
